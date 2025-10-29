@@ -37,16 +37,22 @@ main {
   width: 90%;
   max-width: 900px;
   margin: 2rem auto;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
 }
 
+/* Ensure image displays correctly */
 .image-section {
   display: flex;
   justify-content: center;
-  margin-bottom: 2rem;
+  align-items: center;
 }
 
 .image-section img {
   width: 100%;
+  max-width: 800px;   /* keeps image from being too large */
+  height: auto;
   border-radius: 20px;
   box-shadow: 0 10px 25px rgba(0, 50, 80, 0.4);
   transition: transform 0.5s ease;
@@ -93,4 +99,80 @@ footer {
 .fade-in.visible {
   opacity: 1;
   transform: translateY(0);
+}
+
+/* Make it responsive on smaller screens */
+@media (max-width: 600px) {
+  main {
+    width: 95%;
+  }
+
+  .text-section {
+    padding: 1.5rem;
+  }
+
+  .text-section h2 {
+    font-size: 1.5rem;
+  }
+}
+
+/* New Sections */
+.analysis-section, .improve-section {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 15px;
+  padding: 2rem;
+  margin-top: 2rem;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}
+
+.analysis-section h2,
+.improve-section h2 {
+  color: #b3ecff;
+  margin-bottom: 1rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+  padding-bottom: 0.5rem;
+}
+
+.ugly-points li,
+.improve-points li {
+  margin-bottom: 1rem;
+  line-height: 1.7;
+  color: #d9faff;
+}
+
+.ugly-points strong,
+.improve-points strong {
+  color: #8ce0ff;
+}
+
+/* Inner list styling */
+.improve-points ul {
+  margin-top: 0.5rem;
+  margin-left: 1.5rem;
+  list-style: circle;
+}
+
+.improve-points ul li {
+  color: #bdefff;
+  font-size: 0.95rem;
+  margin-bottom: 0.5rem;
+}
+
+/* Make sections pop on hover */
+.analysis-section:hover, .improve-section:hover {
+  transform: translateY(-5px);
+  transition: all 0.3s ease;
+  box-shadow: 0 10px 25px rgba(0, 100, 150, 0.4);
+}
+
+h2 a {
+  color: #9ee7ff;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+h2 a:hover {
+  color: #ffffff;
+  text-decoration: underline;
 }
