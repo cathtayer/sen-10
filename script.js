@@ -17,4 +17,4 @@ faders.forEach(fader => {
   appearOnScroll.observe(fader);
 });
 
-console.log("Hello, Zara website!");
+console.log("Hello, Zara website!")
