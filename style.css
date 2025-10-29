@@ -1,0 +1,96 @@
+/* General reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Body styling */
+body {
+  background: linear-gradient(180deg, #0f2027, #203a43, #2c5364);
+  color: #e0f7fa;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Header */
+header {
+  text-align: center;
+  padding: 3rem 1rem;
+}
+
+header h1 {
+  font-size: 2.5rem;
+  color: #b3ecff;
+}
+
+.subtitle {
+  color: #9be2e8;
+  font-style: italic;
+}
+
+/* Main Content */
+main {
+  width: 90%;
+  max-width: 900px;
+  margin: 2rem auto;
+}
+
+.image-section {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+
+.image-section img {
+  width: 100%;
+  border-radius: 20px;
+  box-shadow: 0 10px 25px rgba(0, 50, 80, 0.4);
+  transition: transform 0.5s ease;
+}
+
+.image-section img:hover {
+  transform: scale(1.03);
+}
+
+/* Text section */
+.text-section {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 2rem;
+  border-radius: 15px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+}
+
+.text-section h2 {
+  color: #b3ecff;
+  margin-bottom: 1rem;
+}
+
+.text-section p {
+  line-height: 1.8;
+  color: #d9faff;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 1.5rem;
+  font-size: 0.9rem;
+  color: #88d6e6;
+}
+
+/* Fade-in effect */
+.fade-in {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 1.2s ease-out, transform 1.2s ease-out;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
