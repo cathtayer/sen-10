@@ -1,0 +1,23 @@
+{
+  "name": "sen-10",
+  "version": "1.0.0",
+  "description": "",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cathtayer/sen-10.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/cathtayer/sen-10/issues"
+  },
+  "homepage": "https://github.com/cathtayer/sen-10#readme",
+  "devDependencies": {
+    "eslint": "^9.38.0"
+  }
+}
