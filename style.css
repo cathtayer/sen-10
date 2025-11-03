@@ -134,19 +134,23 @@ footer {
   padding-bottom: 0.5rem;
 }
 
-.ugly-points li,
-.improve-points li {
-  margin-bottom: 1rem;
-  line-height: 1.7;
+/* New combined paragraph/list styling for analysis & improvements */
+.ugly-points,
+.improve-points {
+  line-height: 1.8;
   color: #d9faff;
+  margin-bottom: 1rem;
+  font-size: 1rem;
+  text-align: left;
 }
 
+/* emphasize keywords consistently whether inside a paragraph or list */
 .ugly-points strong,
 .improve-points strong {
   color: #8ce0ff;
 }
 
-/* Inner list styling */
+/* Keep nested list styling (for improve-section's inner list) */
 .improve-points ul {
   margin-top: 0.5rem;
   margin-left: 1.5rem;
