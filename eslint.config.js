@@ -15,4 +15,4 @@ export default defineConfig([
   },
 ]);
 
-console.log("hellaur")
+console.log("hellaur");
