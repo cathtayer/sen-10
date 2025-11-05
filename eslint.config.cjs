@@ -1,18 +1,41 @@
-import js from "@eslint/js";
-import globals from "globals";
-import { defineConfig } from "eslint/config";
+const js = require("@eslint/js");
+const globals = require("globals");
 
-export default defineConfig([
+module.exports = [
+  js.configs.recommended,
   {
+    // General script environment (CommonJS)
+    languageOptions: {
+      ecmaVersion: "latest",
+      sourceType: "script",
+      globals: {
+        require: "readonly",
+        module: "readonly",
+        __dirname: "readonly",
+      },
+    },
+  },
+  {
+    // Project JS files treated as modules where appropriate
     files: ["**/*.{js,mjs,cjs}"],
     languageOptions: {
+      ecmaVersion: "latest",
+      sourceType: "module",
       globals: globals.browser,
     },
     rules: {
-      semi: ["error", "always"], // 🚨 require semicolons
-      quotes: ["warn", "double"], // warn if not using double quotes
+      semi: ["error", "always"],
+      quotes: ["warn", "double"],
     },
   },
-]);
-
-console.log("hellaur");
+  {
+    // Jest tests: expose test/expect as globals
+    files: ["__tests__/**/*"],
+    languageOptions: {
+      globals: {
+        test: "readonly",
+        expect: "readonly",
+      },
+    },
+  },
+];
